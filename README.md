@@ -157,11 +157,11 @@ cam_pitch       = 20.0;   // Neigungswinkel nach unten (Tilt)
 Wenn dir die Plattform bei deiner Videoanalyse, Spielvorbereitung und Trainingsarbeit hilft und du die Weiterentwicklung unterstützen möchtest, freue ich mich riesig über deine Unterstützung und einen Kaffee!
 
 <p align="center">
-  <a href="https://paypal.me/sokografik" target="_blank">
+  <a href="https://ppaypal.me/soko21061983" target="_blank">
     <img src="https://img.shields.io/badge/Donate-PayPal.Me-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate via PayPal.Me" />
   </a>
   &nbsp;&nbsp;
-  <a href="https://paypal.me/sokografik" target="_blank">
+  <a href="https://paypal.me/soko21061983" target="_blank">
     <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" />
   </a>
 </p>
