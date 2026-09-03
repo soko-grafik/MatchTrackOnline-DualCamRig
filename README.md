@@ -1,6 +1,6 @@
 # 📷 Dual DJI Osmo Action 4 Rig (80° V-Mount)
 
-[![OpenSCAD](https://img.shields.io/badge/CAD-OpenSCAD-orange.svg)](https://openscad.org/)
+[![PhythonSCAD](https://img.shields.io/badge/CAD-OpenSCAD-orange.svg)](https://www.pythonscad.org/)
 [![3D Print Ready](https://img.shields.io/badge/3D%20Print-PETG%20%7C%20PETG--CF-blue.svg)](#-druckempfehlungen--slicer-einstellungen)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)](#)
 [![Compatibility](https://img.shields.io/badge/Cameras-2x%20DJI%20Osmo%20Action%204-red.svg)](#)
