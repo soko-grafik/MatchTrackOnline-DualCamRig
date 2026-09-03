@@ -21,6 +21,7 @@ Entwickelt für Weitwinkel-Aufzeichnungen, Stereo-Setups, Sport-Tracking und Liv
   - [Druckempfehlungen & Slicer-Einstellungen](#druckempfehlungen--slicer-einstellungen)
 - [⚙️ Parametrische Anpassung](#️-parametrische-anpassung)
 - [🚀 Montageanleitung](#-montageanleitung)
+- [☕ Support & Spenden](#-support--spenden)
 
 ---
 
@@ -52,13 +53,14 @@ Entwickelt für Weitwinkel-Aufzeichnungen, Stereo-Setups, Sport-Tracking und Liv
 ## 📂 Projekt- & Dateistruktur
 
 ```text
-├── dgi_action_4_DualCam-Rig.scad   # Parametrisches OpenSCAD-Hauptmodell
-├── 3mf Files/                      # Vorbereitete Slicer-Dateien (Bambu Studio / PrusaSlicer)
-│   ├── base.3mf                    # Hauptgehäuse
-│   ├── cover.3mf                   # Kompakter Standarddeckel
-│   ├── cover_with_shield.3mf       # Deckel mit Regenschutz (Rain Shield)
-│   └── emblem.3mf                  # Front-Trapez Emblem
-└── README.md                       # Dokumentation
+├── DJI Osmo Action 4/
+│   ├── dgi_action_4_DualCam-Rig.scad   # Parametrisches OpenSCAD-Hauptmodell
+│   └── 3mf Files/                      # Vorbereitete Slicer-Dateien (Bambu Studio / PrusaSlicer)
+│       ├── base.3mf                    # Hauptgehäuse
+│       ├── cover.3mf                   # Kompakter Standarddeckel
+│       ├── cover_with_shield.3mf       # Deckel mit Regenschutz (Rain Shield)
+│       └── emblem.3mf                  # Front-Trapez Emblem
+└── README.md                           # Dokumentation
 ```
 
 ---
@@ -67,7 +69,7 @@ Entwickelt für Weitwinkel-Aufzeichnungen, Stereo-Setups, Sport-Tracking und Liv
 
 ### OpenSCAD Render-Modi
 
-Die STL-Generierung der Einzelteile erfolgt über die Variable `RENDER_MODE` im Quellcode ([`dgi_action_4_DualCam-Rig.scad`](./dgi_action_4_DualCam-Rig.scad)):
+Die STL-Generierung der Einzelteile erfolgt über die Variable `RENDER_MODE` im Quellcode ([`dgi_action_4_DualCam-Rig.scad`](./DJI%20Osmo%20Action%204/dgi_action_4_DualCam-Rig.scad)):
 
 1. Parameter `RENDER_MODE` in der `.scad`-Datei auf das gewünschte Bauteil setzen.
 2. <kbd>F6</kbd> drücken (Vollständiges Rendern).
@@ -97,7 +99,7 @@ Für maximale Robustheit und Witterungsbeständigkeit am Stativ empfiehlt sich k
 
 ## ⚙️ Parametrische Anpassung
 
-Das Modell ist vollständig parametrisch aufgebaut. Alle Kernabmessungen können im oberen Bereich der [`dgi_action_4_DualCam-Rig.scad`](./dgi_action_4_DualCam-Rig.scad) individuell konfiguriert werden:
+Das Modell ist vollständig parametrisch aufgebaut. Alle Kernabmessungen können im oberen Bereich der [`dgi_action_4_DualCam-Rig.scad`](./DJI%20Osmo%20Action%204/dgi_action_4_DualCam-Rig.scad) individuell konfiguriert werden:
 
 ```openscad
 // ==========================================
@@ -146,8 +148,7 @@ cam_pitch       = 20.0;   // Neigungswinkel nach unten (Tilt)
 5. **Deckel verschrauben:**
    - *Rain Shield* oder *Top Cover* aufsetzen und mit den 3× M3-Schrauben handfest fixieren. Die Schraubenköpfe versenken sich bündig in den dafür vorgesehenen Vertiefungen.
 
-
-
+---
 
 ## ☕ Support & Spenden
 
@@ -156,11 +157,11 @@ cam_pitch       = 20.0;   // Neigungswinkel nach unten (Tilt)
 Wenn dir die Plattform bei deiner Videoanalyse, Spielvorbereitung und Trainingsarbeit hilft und du die Weiterentwicklung unterstützen möchtest, freue ich mich riesig über deine Unterstützung und einen Kaffee!
 
 <p align="center">
-  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=hello%40soko-grafik.de&currency_code=EUR&item_name=MatchTrack+Online+Support" target="_blank">
-    <img src="https://img.shields.io/badge/Donate-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate via PayPal" />
+  <a href="https://paypal.me/sokografik" target="_blank">
+    <img src="https://img.shields.io/badge/Donate-PayPal.Me-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate via PayPal.Me" />
   </a>
   &nbsp;&nbsp;
-  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=hello%40soko-grafik.de&currency_code=EUR&item_name=MatchTrack+Online+Support" target="_blank">
+  <a href="https://paypal.me/sokografik" target="_blank">
     <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" />
   </a>
 </p>
