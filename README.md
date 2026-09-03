@@ -5,6 +5,10 @@
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)](#)
 [![Compatibility](https://img.shields.io/badge/Cameras-2x%20DJI%20Osmo%20Action%204-red.svg)](#)
 
+<p align="center">
+  <img src="./DJI%20Osmo%20Action%204/dgi_action_4_DualCam-Rig.png" alt="Dual DJI Osmo Action 4 Rig Preview" width="100%" />
+</p>
+
 Ein professionelles, vollständig parametrisches 3D-Druck-Rig für **zwei DJI Osmo Action 4** Kameras, konstruiert in **OpenSCAD**.
 
 Entwickelt für Weitwinkel-Aufzeichnungen, Stereo-Setups, Sport-Tracking und Livestreaming. Das Gehäuse bietet ein durchdachtes Kabel- und Energiemanagement mit unsichtbar integrierter Powerbank-Garage, dauerhafter USB-C-Stromversorgung und einem massiven **Rain Shield (Regenschutz)** für wetterfeste Außeneinsätze.
@@ -54,12 +58,18 @@ Entwickelt für Weitwinkel-Aufzeichnungen, Stereo-Setups, Sport-Tracking und Liv
 
 ```text
 ├── DJI Osmo Action 4/
+│   ├── dgi_action_4_DualCam-Rig.png    # 3D-Vorschau / Render-Bild
 │   ├── dgi_action_4_DualCam-Rig.scad   # Parametrisches OpenSCAD-Hauptmodell
-│   └── 3mf Files/                      # Vorbereitete Slicer-Dateien (Bambu Studio / PrusaSlicer)
-│       ├── base.3mf                    # Hauptgehäuse
-│       ├── cover.3mf                   # Kompakter Standarddeckel
-│       ├── cover_with_shield.3mf       # Deckel mit Regenschutz (Rain Shield)
-│       └── emblem.3mf                  # Front-Trapez Emblem
+│   ├── 3mf Files/                      # Vorbereitete Slicer-Dateien (Bambu Studio / PrusaSlicer)
+│   │   ├── base.3mf                    # Hauptgehäuse
+│   │   ├── cover.3mf                   # Kompakter Standarddeckel
+│   │   ├── cover_with_shield.3mf       # Deckel mit Regenschutz (Rain Shield)
+│   │   └── emblem.3mf                  # Front-Trapez Emblem
+│   └── stl Files/                      # Exportierte Standard-STLs zum Direktdruck
+│       ├── base.stl
+│       ├── cover.stl
+│       ├── cover_with_shield.stl
+│       └── emblem.stl
 └── README.md                           # Dokumentation
 ```
 
