@@ -1,6 +1,6 @@
 # 📷 Dual DJI Osmo Action 4 Rig (80° V-Mount)
 
-[![PhythonSCAD](https://img.shields.io/badge/CAD-OpenSCAD-orange.svg)](https://www.pythonscad.org/)
+[![OpenSCAD](https://img.shields.io/badge/CAD-OpenSCAD-orange.svg)](https://openscad.org/)
 [![3D Print Ready](https://img.shields.io/badge/3D%20Print-PETG%20%7C%20PETG--CF-blue.svg)](#-druckempfehlungen--slicer-einstellungen)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)](#)
 [![Compatibility](https://img.shields.io/badge/Cameras-2x%20DJI%20Osmo%20Action%204-red.svg)](#)
@@ -11,7 +11,7 @@
 
 Ein professionelles, vollständig parametrisches 3D-Druck-Rig für **zwei DJI Osmo Action 4** Kameras, konstruiert in **OpenSCAD**.
 
-Entwickelt für Weitwinkel-Aufzeichnungen, Stereo-Setups, Sport-Tracking und Livestreaming. Das Gehäuse bietet ein durchdachtes Kabel- und Energiemanagement mit unsichtbar integrierter Powerbank-Garage, dauerhafter USB-C-Stromversorgung und einem massiven **Rain Shield (Regenschutz)** für wetterfeste Außeneinsätze.
+Entwickelt für Weitwinkel-Aufzeichnungen, Stereo-Setups, Sport-Tracking und Livestreaming. Das Gehäuse bietet ein durchdachtes Kabel- und Energiemanagement mit dauerhafter USB-C-Stromversorgung, einem massiven **Rain Shield (Regenschutz)** für wetterfeste Außeneinsätze sowie einer **optionalen, in OpenSCAD zuschaltbaren Powerbank-Garage**.
 
 ---
 
@@ -33,8 +33,8 @@ Entwickelt für Weitwinkel-Aufzeichnungen, Stereo-Setups, Sport-Tracking und Liv
 
 - **📐 Präzise Geometrie:** 80° horizontale Spreizung und konfigurierbarer Neigungswinkel (Tilt, z. B. 20° nach unten gerichtet).
 - **🌧️ Rain Shield Deckel:** Alternativer Top-Cover-Deckel mit breiter Krempe und bündigen Schraubensenkungen – maximaler Schutz vor Regen ohne Sichtfeldeinschränkung der Linsen.
-- **🔋 Integrierte Powerbank-Garage:** Horizontaler Einschub von hinten im vorderen "V" des Rigs. Geschützt im Gehäuseinneren, mit frontseitigem Auswurfloch und rückwärtigen Kabelkanälen.
-- **⚡ Continuous Power:** Saubere USB-C-Aussparungen an beiden Kamera-Bays zur direkten Verkabelung von der zentralen Powerbank.
+- **⚡ Continuous Power:** Saubere USB-C-Aussparungen an beiden Kamera-Bays zur direkten Verkabelung für dauerhafte externe Stromversorgung.
+- **🔋 Optionale Powerbank-Garage (nur via OpenSCAD):** Kann bei Bedarf parametrisch über OpenSCAD (`pb_enable = true`) im vorderen "V" des Rigs aktiviert und maßgeschneidert werden. In den beiliegenden Standard-Druckdateien (.3mf / .stl) ist das Gehäuse standardmäßig ohne Powerbank-Schacht ausgeführt.
 - **❄️ Thermomanagement:** Strategisch platzierte Belüftungsschlitze (*Ventilation Slots*) verhindern Hitzestau bei Daueraufnahmen.
 - **🏷️ Individualisierbar:** Frontseitig eingelassenes Trapez-Emblem für eigenes Branding (ideal für Single- oder Multi-Color-Druck).
 - **🔩 Solide Stativaufnahme:** Integrierter Kragen für ein standardmäßiges 1/4"-Stativgewinde an der massiven Unterseite.
@@ -46,11 +46,11 @@ Entwickelt für Weitwinkel-Aufzeichnungen, Stereo-Setups, Sport-Tracking und Liv
 | Komponente | Anzahl | Beschreibung / Empfehlung |
 | :--- | :---: | :--- |
 | **Kameras** | 2× | DJI Osmo Action 4 |
-| **Powerbank** | 1× | Kompakte Powerbank (im Code vordefiniert auf ca. 40 × 60 × 20 mm, flexibel anpassbar) |
 | **Gewindeeinsätze (Base)** | 3× | M3 Einschmelzmuttern / Heat-Set Inserts (z. B. Ruthex M3 × 5,7 mm) |
 | **Schrauben (Deckel)** | 3× | M3 Zylinderkopf- oder Innensechskantschrauben (Länge passend zum Deckel) |
 | **Stativgewinde** | 1× | 1/4"-20 UNC Gewindeeinsatz / Einschmelzmutter für Kamerastative |
 | **USB-Kabel** | 2× | Kurze USB-C auf USB-C Kabel (idealerweise mit 90°-Winkelsteckern) |
+| **Powerbank** *(optional)* | 1× | Nur erforderlich, falls die optionale Powerbank-Garage im SCAD-Modell aktiviert wird (`pb_enable = true`) |
 
 ---
 
@@ -87,7 +87,7 @@ Die STL-Generierung der Einzelteile erfolgt über die Variable `RENDER_MODE` im 
 
 | `RENDER_MODE` | Bauteil | Beschreibung |
 | :--- | :--- | :--- |
-| `"base"` | **Hauptgehäuse** | Rig-Basis mit Kameraschächten, Powerbank-Garage & Stativkragen |
+| `"base"` | **Hauptgehäuse** | Rig-Basis mit Kameraschächten & Stativkragen (Powerbank-Garage optional via SCAD zuschaltbar) |
 | `"shield"` | **Rain Shield Deckel** | Regenschutz-Deckel (wird automatisch flach aufs Druckbett gelegt) |
 | `"top"` | **Standard Deckel** | Flacher, kompakter Deckel ohne Überhang |
 | `"emblem"` | **Front-Emblem** | Trapez-Insert für Front-Branding zum Einklicken oder Einkleben |
@@ -102,7 +102,7 @@ Für maximale Robustheit und Witterungsbeständigkeit am Stativ empfiehlt sich k
 | **Wandlinien (Walls)** | **4 – 5** | Wichtig für mechanische Stabilität und sicheren Halt der Einschmelzmuttern |
 | **Infill** | **20% – 30% Gyroid** | Ausgezeichnete Stabilität bei gleichmäßigem Materialeinsatz |
 | **Schichthöhe** | **0.16 – 0.20 mm** | 0.20 mm Standard liefert perfekte Ergebnisse |
-| **Support (Base)** | **Normal / Tree Support** | Nötig für Kameraschächte und den Powerbank-Einschub |
+| **Support (Base)** | **Normal / Tree Support** | Nötig für Kameraschächte und Überhänge (sowie Powerbank-Einschub, falls in SCAD aktiviert) |
 | **Support (Shield/Top)** | **Keine** | Liegen flach auf dem Druckbett auf und drucken ohne Stützen |
 
 ---
@@ -116,7 +116,8 @@ Das Modell ist vollständig parametrisch aufgebaut. Alle Kernabmessungen können
 // PARAMETER & KONFIGURATION
 // ==========================================
 
-// Powerbank-Abmessungen (Einschubkammer)
+// Powerbank-Halterung (OPTIONAL – standardmäßig deaktiviert)
+pb_enable       = false;  // true = Powerbank-Garage im V-Bereich generieren
 pb_width        = 40.0;   // Breite der Powerbank in mm
 pb_length       = 60.0;   // Länge/Tiefe der Powerbank in mm
 pb_height       = 20.0;   // Höhe der Powerbank in mm
@@ -138,8 +139,8 @@ cam_pitch       = 20.0;   // Neigungswinkel nach unten (Tilt)
               │  (3× M3 Schrauben)
               ▼
   ┌─────────────────────────┐
-  │ [Cam 1]  [PB]  [Cam 2]  │ ◄── Einschub Kameras & Powerbank
-  │      [Main Base]        │
+  │  [Cam 1]  (PB)  [Cam 2] │ ◄── Kameras & (optional Powerbank)
+  │       [Main Base]       │
   └─────────────────────────┘
               ▲
               │  (1× 1/4" Stativadapter)
@@ -150,11 +151,11 @@ cam_pitch       = 20.0;   // Neigungswinkel nach unten (Tilt)
    - Die 3× M3-Gewindeeinsätze mit einer Lötkolbenspitze (ca. 220–250 °C) vorsichtig und gerade in die vorgesehenen Schraubtürme der Base einschmelzen.
 2. **Stativgewinde montieren:**
    - Den 1/4"-Stativ-Gewindeeinsatz an der Unterseite der Base bündig einpressen bzw. einschrauben.
-3. **Powerbank einschieben:**
-   - Die Powerbank von hinten horizontal in den zentralen Schacht einschieben (das vordere Loch dient bei Bedarf als Auswerfer).
+3. **(Optional) Powerbank einschieben:**
+   - *Nur relevant, falls in OpenSCAD `pb_enable = true` gewählt wurde:* Die Powerbank von hinten horizontal in den zentralen Schacht einschieben (das vordere Loch dient bei Bedarf als Auswerfer).
 4. **Kameras & Verkabelung:**
    - Beide DJI Osmo Action 4 Kameras in ihre Halterungen einsetzen.
-   - Kurze USB-C-Kabel von der Powerbank durch die integrierten Kanäle zu den Ladebuchsen der Kameras verlegen.
+   - USB-C-Kabel (z. B. von einer externen Stromversorgung oder der optionalen internen Powerbank) durch die Aussparungen an den Ladebuchsen der Kameras anschließen.
 5. **Deckel verschrauben:**
    - *Rain Shield* oder *Top Cover* aufsetzen und mit den 3× M3-Schrauben handfest fixieren. Die Schraubenköpfe versenken sich bündig in den dafür vorgesehenen Vertiefungen.
 
